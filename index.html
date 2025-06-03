@@ -305,7 +305,7 @@
               We introduce the first framework to transform a large-scale video foundation model (18B parameters) into a real-time streaming system for audio-driven avatar animation, toggling between speaking and listening modes for infinite turns, enabling immersive and interactive FaceTime experiences from diverse input image styles.
             </p>
             <p style="font-size: 1.1rem; margin-bottom: 30px;">
-              Please take a look at the demo videos below, showcasing what's possible for FaceTime experiences using our approach. Note that it works well on both desktop and mobile devices. 
+              All videos are recorded live. 
             </p>
           </div>
         </div>
@@ -408,9 +408,13 @@
   </div>
 
   <div class="point">
-    <p>3. We introduce system-level optimizations that run the score network and VAE model on separate CUDA streams, allowing our 18B-parameter video generation model to operate in real-time on two H100 GPUs.</p>
+    <p>3. We introduce system-level optimizations that run the score network and VAE model on separate CUDA streams, allowing our 18B-parameter video generation model to operate in real-time.</p>
     <img src="assets/images/runtime_analysis.png" alt="Runtime Analysis Diagram">
   </div>
+
+  <div class="point">
+    <p>4. Our model demonstrates seamless integration with mainstream audio large language models and WebRTC streaming services (LiveKit), enabling real-time, interactive FaceTime-style experiences across desktop and mobile platforms through a unified framework.</p>
+</div>
 </section>
 
 <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
