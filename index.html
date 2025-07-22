@@ -172,6 +172,42 @@
     .bottom-section .point p:first-child {
       font-weight: bold;
     }
+
+    .video-triangle-section {
+      background-color: black;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .video-row {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+
+    .top-row .video-player {
+      flex: 1 1 60%;
+      max-width: 800px;
+      aspect-ratio: 16 / 9;
+    }
+
+    .bottom-row .video-player {
+      flex: 1 1 40%;
+      max-width: 500px;
+      aspect-ratio: 16 / 9;
+    }
+
+    .video-player {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
 </style>
 
 <head>
@@ -293,14 +329,24 @@
 </section>
 
 <!-- Intro Video -->
-<section class="section pl-0 pr-0 is-black" style="background-color: black">
-    <div class="teaser-container">
-      <video controls playsinline class="teaser-video lazy">
-        <source data-src="assets/videos/intro.mp4" type="video/mp4">
-      </video>
-    </div>
-  </section>
+<section class="video-triangle-section">
+  <!-- Top video -->
+  <div class="video-row top-row">
+    <video controls playsinline class="video-player">
+      <source src="assets/videos/intro.mp4" type="video/mp4">
+    </video>
+  </div>
 
+  <!-- Bottom two videos -->
+  <div class="video-row bottom-row">
+    <video controls playsinline class="video-player">
+      <source src="assets/videos/stevejobs.mp4" type="video/mp4">
+    </video>
+    <video controls playsinline class="video-player">
+      <source src="assets/videos/albert.mp4" type="video/mp4">
+    </video>
+  </div>
+</section>
   
 <!-- Video Gallery -->
 <section class="section hero is-small pl-0 pr-0 is-black" style="background-color: black">
@@ -381,6 +427,26 @@
                 </video>
                 <span class="video-title-3x3">
                   House Cat Character
+                </span>
+              </div>
+            </div>
+
+            <!-- Row 4: 2 videos (centered) -->
+            <div class="carousel-row-3x3">
+              <div class="video-item video-item-3x3">
+                <video controls playsinline class="plyr-video lazy">
+                  <source data-src="assets/videos/hangman.mp4" type="video/mp4">
+                </video>
+                <span class="video-title-3x3">
+                  Education
+                </span>
+              </div>
+              <div class="video-item video-item-3x3">
+                <video controls playsinline class="plyr-video lazy">
+                  <source data-src="assets/videos/crypto.mp4" type="video/mp4">
+                </video>
+                <span class="video-title-3x3">
+                  E-commerce
                 </span>
               </div>
             </div>
